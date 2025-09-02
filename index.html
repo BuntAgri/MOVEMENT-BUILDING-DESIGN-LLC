@@ -1,79 +1,118 @@
-
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>V.E. BATIMENT</title>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>MOVEMENT BUILDING DESIGN LLC</title>
   <style>
-    * { margin: 0; padding: 0; box-sizing: border-box; }
-    body { font-family: 'Inter', sans-serif; background: #f9fafb; color: #111827; line-height: 1.6; }
-    header, footer { background: #1f2937; color: white; text-align: center; padding: 30px; }
-    nav a { color: #fbbf24; margin: 0 12px; text-decoration: none; font-weight: 600; }
-    section { padding: 60px 20px; max-width: 1200px; margin: auto; text-align: center; }
-    h2 { color: #1f2937; margin-bottom: 20px; font-size: 2.4em; }
-    .gallery { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; }
-    .gallery img { width: 100%; border-radius: 8px; }
-    .contact-form input, .contact-form textarea {
-      width: 100%; padding: 10px; margin: 10px 0; border: 1px solid #ccc; border-radius: 5px;
+    :root{
+      --ink:#0d1117;        /* dark bg */
+      --card:#131a23;       /* card bg */
+      --teal:#12b0a2;       /* accent  */
+      --sand:#e7e3d7;       /* soft text */
+      --line:rgba(255,255,255,.12);
     }
-    iframe { width: 100%; height: 300px; border: 0; border-radius: 8px; margin-top: 20px; }
+    *{box-sizing:border-box}
+    body{margin:0;font-family:Inter, Arial, Helvetica, sans-serif;background:var(--ink);color:#e9eef6}
+    a{color:var(--teal);text-decoration:none}
+    header{background:linear-gradient(135deg,#0e141c 0%, #121a24 100%);border-bottom:4px solid var(--teal);padding:28px 16px;text-align:center}
+    header h1{margin:0;font-size:2.4rem;letter-spacing:.3px}
+    header p{margin:6px 0 0;color:var(--sand)}
+    nav{background:#0e141c;text-align:center;padding:12px}
+    nav a{color:#e9eef6;margin:0 16px;font-weight:700}
+    nav a:hover{color:var(--teal)}
+    .hero{max-width:1200px;margin:0 auto;padding:34px 16px;display:grid;grid-template-columns:1.2fr .8fr;gap:18px;align-items:center}
+    .hero img{width:100%;border-radius:14px;border:4px solid var(--teal)}
+    .hero .box{background:var(--card);border:1px solid var(--line);border-left:6px solid var(--teal);border-radius:14px;padding:18px}
+    .btn{display:inline-block;padding:12px 16px;border-radius:10px;font-weight:800}
+    .btn.primary{background:var(--teal);color:#041014}
+    .btn.ghost{border:2px solid var(--teal);color:#fff}
+    .section{max-width:1200px;margin:22px auto;background:var(--card);padding:22px;border-radius:14px;border:1px solid var(--line);box-shadow:0 10px 28px rgba(0,0,0,.25)}
+    .section h2{margin:0 0 12px;color:#dfe7f1}
+    .two-col{display:grid;grid-template-columns:1fr 1fr;gap:20px}
+    ul{margin:0;padding-left:18px;line-height:1.9}
+    .gallery{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:14px}
+    .gallery img{width:100%;border-radius:12px;border:2px solid var(--line)}
+    footer{background:#0e141c;border-top:4px solid var(--teal);text-align:center;padding:18px;margin-top:26px;color:#c9d3e2}
+    @media (max-width:900px){ .hero{grid-template-columns:1fr} }
   </style>
 </head>
 <body>
 
-<header>
-  <h1>V.E. BATIMENT</h1>
+  <header>
+    <h1>MOVEMENT BUILDING DESIGN LLC</h1>
+    <p>Architecture • Building Design • Project Coordination</p>
+  </header>
+
   <nav>
-    <a href="#about">Présentation</a>
+    <a href="#about">About</a>
     <a href="#services">Services</a>
-    <a href="#gallery">Galerie</a>
+    <a href="#portfolio">Portfolio</a>
     <a href="#contact">Contact</a>
-    <a href="#map">Adresse</a>
   </nav>
-</header>
 
-<section id="about">
-  <h2>Présentation</h2>
-  <p>Basée à Les Mureaux, V.E. BATIMENT est une entreprise spécialisée dans la maçonnerie générale et les gros travaux de construction. Grâce à une équipe qualifiée, nous réalisons des chantiers sur mesure en respectant les normes de qualité et de sécurité.</p>
-</section>
+  <!-- HERO -->
+  <section class="hero">
+    <img src="https://avatars.mds.yandex.net/i?id=793fd454a31fad0e60677cc892cab0bdf9a8b80e-9226866-images-thumbs&n=13" alt="Modern building — hero">
+    <div class="box">
+      <h2 style="margin-top:0;">Spaces that move people.</h2>
+      <p>We craft contemporary residential and commercial designs that blend performance, aesthetics, and cost-smart constructability.</p>
+      <div style="margin-top:10px;display:flex;gap:10px;flex-wrap:wrap">
+        <a class="btn primary" href="tel:+12549911370">Call +1 254-991-1370</a>
+        <a class="btn ghost" href="mailto:admin@trsnploc.shop">Email admin@trsnploc.shop</a>
+      </div>
+    </div>
+  </section>
 
-<section id="services">
-  <h2>Nos Services</h2>
-  <p>Gros œuvre de bâtiment, travaux de maçonnerie, fondations, rénovation structurelle, et accompagnement personnalisé pour tous vos projets de construction.</p>
-</section>
+  <!-- ABOUT -->
+  <section id="about" class="section">
+    <h2>About Us</h2>
+    <div class="two-col">
+      <p><strong>MOVEMENT BUILDING DESIGN LLC</strong> delivers integrated building design—from early concept to permit set. We partner closely with owners, developers, and contractors to keep projects clear, coordinated, and on schedule.</p>
+      <p>Our team brings experience across housing, offices, and adaptive reuse, with a focus on energy-aware envelopes and efficient planning.</p>
+    </div>
+  </section>
 
-<section id="gallery">
-  <h2>Galerie</h2>
-  <div class="gallery">
-    <img src="https://images.unsplash.com/photo-1570126681032-3a7c41f13b0d?auto=format&fit=crop&w=800&q=80" alt="chantier 1">
-    <img src="https://images.unsplash.com/photo-1570129477492-45c003edd2be?auto=format&fit=crop&w=800&q=80" alt="chantier 2">
-    <img src="https://images.unsplash.com/photo-1581090700227-1e37b190418e?auto=format&fit=crop&w=800&q=80" alt="chantier 3">
-  </div>
-</section>
+  <!-- SERVICES -->
+  <section id="services" class="section">
+    <h2>Services</h2>
+    <ul>
+      <li>Concept & Schematic Design</li>
+      <li>3D Visualization & Presentation Sets</li>
+      <li>Permit Drawings & Coordination</li>
+      <li>Interior Planning & Fit-Out</li>
+      <li>Facade & Envelope Consulting</li>
+    </ul>
+  </section>
 
-<section id="contact">
-  <h2>Contactez-nous</h2>
-  <p>Email : contact@vebatiment.shop</p>
-  <p>Téléphone : +33 6 05 99 64 90</p>
-  <form class="contact-form">
-    <input type="text" placeholder="Nom">
-    <input type="email" placeholder="Email">
-    <textarea placeholder="Votre message"></textarea>
-    <button type="submit">Envoyer</button>
-  </form>
-</section>
+  <!-- PORTFOLIO -->
+  <section id="portfolio" class="section">
+    <h2>Portfolio</h2>
+    <div class="gallery">
+      <img src="https://avatars.mds.yandex.net/i?id=96deddb25ceceed42aea78f0b84a11c6bc96da86-4809921-images-thumbs&n=13" alt="Project 1">
+      <img src="https://avatars.mds.yandex.net/i?id=7e79b2c11f0360ac4b1b6adf42ad33b684f88d05-5234178-images-thumbs&n=13" alt="Project 2">
+      <img src="https://avatars.mds.yandex.net/i?id=a61e733763daf36f34e985e9c9eaed17a6230c43-9246913-images-thumbs&n=13" alt="Project 3">
+    </div>
+  </section>
 
-<section id="map">
-  <h2>Adresse</h2>
-  <p>66 Avenue du Maréchal Foch, 78130 Les Mureaux, France</p>
-  <iframe src="https://www.google.com/maps?q=66+Avenue+du+Mar%C3%A9chal+Foch,+Les+Mureaux,+France&output=embed" allowfullscreen loading="lazy"></iframe>
-</section>
+  <!-- CONTACT -->
+  <section id="contact" class="section">
+    <h2>Contact</h2>
+    <div class="two-col">
+      <div>
+        <p>📧 <strong>Email:</strong> <a href="mailto:admin@trsnploc.shop">admin@trsnploc.shop</a></p>
+        <p>📞 <strong>Phone:</strong> <a href="tel:+12549911370">+1 254-991-1370</a></p>
+        <p>🌐 <strong>Availability:</strong> Mon–Fri 9:00–18:00</p>
+      </div>
+      <div>
+        <p><em>Let’s build something exceptional—send your brief and we’ll reply the same day.</em></p>
+      </div>
+    </div>
+  </section>
 
-<footer>
-  &copy; 2025 V.E. BATIMENT — Tous droits réservés
-</footer>
+  <footer>
+    <p>&copy; 2025 MOVEMENT BUILDING DESIGN LLC — All Rights Reserved</p>
+  </footer>
 
 </body>
 </html>
